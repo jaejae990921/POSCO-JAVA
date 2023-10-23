@@ -8,6 +8,7 @@ public class ArrEx {
 		// 배열 출력 기초
 //		int[] intArr = { 1, 2, 3, 4, 5 };
 //		
+		// 방법1. for문 사용
 //		for (int i = 0; i < intArr.length; i++) {
 //			System.out.print(intArr[i] + " ");
 //		}
@@ -21,8 +22,22 @@ public class ArrEx {
 			intArr[i] = sc.nextInt();
 		}
 
-		// Arrays.toString : 배열의 요소를 문자열로 반환
-		System.out.println(Arrays.toString(intArr));
+		// ----------
+
+		// 방법2. Arrays.toString : 배열의 요소를 문자열로 반환
+//		System.out.println(Arrays.toString(intArr));
+//		sc.close();
+
+		// ----------
+
+		// 방법3. for-each문 사용
+		int sum = 0;
+		for (int num : intArr) {
+			System.out.print(num + " ");
+			sum += num;
+		}
+		System.out.println(sum);
+
 		sc.close();
 	}
 }
